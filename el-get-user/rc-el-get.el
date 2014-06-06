@@ -11,18 +11,18 @@
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 
-;;(setq el-get-sources '(
+(setq el-get-sources '(
 ;;                       nav-flash
 ;;                       smartrep ucs-utils persistent-soft
 ;;                     list-utils pcache visible-mark
 ;;
 ;;                       auto-complete
 ;;                       back-button
-;;                       cedet
+                       cedet
 ;;                       cmake-mode
 ;;                       cmake-project
 ;;                       protobuf-mode
-;;                       ))
+                       ))
 
-;;(el-get 'sync el-get-sources)
+(el-get 'sync el-get-sources)
 (el-get 'sync)
