@@ -4,9 +4,7 @@
 
 (add-to-list 'load-path (concat cedet-root-path "contrib"))
 
-;; (require 'cedet-contrib)p
-;;(load-file "~/proj/emacs/prelude-mak-git/el-get/cedet/cedet-devel-load.el")
-;;(load-file "~/proj/emacs/prelude-mak-git/el-get/cedet/contrib/cedet-contrib-load.el")
+;; (require 'cedet-contrib)
 
 (add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
