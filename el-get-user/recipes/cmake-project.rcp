@@ -1,0 +1,4 @@
+(:name cmake-project
+       :description "A minor-mode integrating the CMake build process with the Emacs ecosystem."
+       :type github
+       :pkgname "alamaison/emacs-cmake-project")
