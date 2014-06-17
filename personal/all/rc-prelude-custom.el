@@ -11,13 +11,13 @@
 ;;(setq prelude-flyspell nil)
 
 ;; scroll
-;; (setq scroll-margin 5
-;;       scroll-conservatively 10000
-;;       scroll-preserve-screen-position 1 ;; nil
-;;       scroll-step 1
-;;       mouse-wheel-follow-mouse t
-;;       mouse-wheel-progressive-speed nil
-;;       mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq scroll-margin 5
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1 ;; nil
+      scroll-step 1
+      mouse-wheel-follow-mouse t
+      mouse-wheel-progressive-speed nil
+      mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 
 ;; hooks
 ;; (defun alexott/common-hook ()
@@ -76,7 +76,7 @@
 (global-set-key (kbd "C--") 'nil)
 
 ;;;
-;;(require 'whitespace)
-;;(setq whitespace-line-column 100) ;; limit line length
+(require 'whitespace)
+(setq whitespace-line-column 100) ;; limit line length
 
 ;;; rc-prelude-custom.el ends here

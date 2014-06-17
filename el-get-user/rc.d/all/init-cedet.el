@@ -1,4 +1,6 @@
-;;; emacs-rc-cedet.el ---
+;;; emacs-rc-cedet.el --- Description
+;;; Commentary:
+
 
 (setq cedet-root-path (file-name-as-directory "~/.emacs.d/el-get/cedet/"))
 
