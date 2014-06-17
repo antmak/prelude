@@ -48,7 +48,6 @@
                              (point-min) (+ (point-min) size)
                              "enca" nil enca-buffer nil "-m" "-L" "russian")))))))
       (unwind-protect
-          (message "ENCA UNW")
           (when (= 0 (funcall run-enca))
             (with-current-buffer enca-buffer
               (goto-char 1)
