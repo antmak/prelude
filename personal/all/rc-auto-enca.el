@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (load "auto-enca")
+(setenv "ENCAOPT" "-L russian")
+
+(when (load "auto-enca" 'noerror)
   (modify-coding-system-alist 'file "" 'enca-detect-coding))
 ;;; rc-auto-enca.el ends here

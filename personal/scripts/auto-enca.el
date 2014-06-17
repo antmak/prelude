@@ -14,6 +14,7 @@
 ;; To get this function working, put the file at some place in your
 ;; load-path, compile, and add something like this into .emacs:
 ;;
+;; (setenv "ENCAOPT" "-L russian")
 ;; (when (load "auto-enca" 'noerror)
 ;;   (modify-coding-system-alist 'file "" 'enca-detect-coding))
 ;;
@@ -37,7 +38,7 @@
                         (lambda ()
                           (if (file-exists-p target)
                               (call-process "enca" target
-                                            enca-buffer nil "-m" "-L" "russian")
+                                            enca-buffer nil "-m")
                             1))
                       (lambda ()
                         (with-current-buffer (cdr target)
@@ -46,7 +47,7 @@
                                                     (point-min)))))
                             (call-process-region
                              (point-min) (+ (point-min) size)
-                             "enca" nil enca-buffer nil "-m" "-L" "russian")))))))
+                             "enca" nil enca-buffer nil "-m")))))))
       (unwind-protect
           (when (= 0 (funcall run-enca))
             (with-current-buffer enca-buffer
