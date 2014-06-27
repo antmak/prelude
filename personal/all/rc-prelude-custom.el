@@ -11,11 +11,11 @@
 ;;(setq prelude-flyspell nil)
 
 ;; scroll
-(setq scroll-margin 5
+(setq scroll-margin 4
       scroll-conservatively 10000
-      scroll-preserve-screen-position 1 ;; nil
+      scroll-preserve-screen-position nil ;; nil
       scroll-step 1
-      mouse-wheel-follow-mouse t
+      mouse-wheel-follow-mouse nil
       mouse-wheel-progressive-speed nil
       mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 
