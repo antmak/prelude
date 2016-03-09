@@ -1,0 +1,26 @@
+# Copy this service file to ~/.config/systemd/user/emacs.service
+#
+# Control:
+#	systemctl --user enable emacs
+#	systemctl --user start emacs
+#	systemctl --user stop emacs
+#	systemctl --user disable emacs
+
+[Unit]
+Description=GNU Emacs: the extensible, self-documenting text editor
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
+Restart=always
+
+#User=%i
+#WorkingDirectory=%h
+
+# Remove the limit in startup timeout, since emacs
+# cloning and building all packages can take time
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
